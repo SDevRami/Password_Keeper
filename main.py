@@ -440,9 +440,9 @@ class PasswordKeeperApp:
     def delete_item(self, item_index):
         # Confirm deletion
         if messagebox.askyesno("Confirm Delete", "Are you sure you want to delete this item?"):
-            del self.password_data[item_index]  # Remove the item from the list
-            self.save_data(self.salt)  # Save the updated data
-            self.display_password_list()  # Refresh the displayed list
+            del self.password_data[item_index]
+            self.save_data(self.salt)
+            self.display_password_list()
 
     def save_edit(self, item_index, entries, window):
         title = entries["entry_title"].get()
@@ -473,3 +473,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = PasswordKeeperApp(root)
     root.mainloop()
+
